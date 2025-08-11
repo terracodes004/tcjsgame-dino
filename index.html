@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino game - TCJSgame</title>
+    <script src="tcjsgame-v2.js"></script>
+    <style>
+        body{
+            text-align: center;
+        }
+        canvas{
+            width: 75%;
+            height: 75%;
+        }
+        button{
+            width: 99%;
+            border: none;
+            padding-top: 3mm;
+            padding-bottom: 3mm ;
+
+        }
+        .gui{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <script src="dino.js"></script>
+    <div class="gui">
+    <button onclick="
+        
+
+        if(dino.gravity == 1 && dino.y >= display.canvas.height - 75){
+            dino.gravity = jumpPower
+            s += 1
+            console.log(Math.random())
+            setTimeout(()=>{
+                dino.gravity = 1
+                console.log('hjvk')
+            }, 250)
+        }
+        
+    
+        ">Jump</button>
+    <button onclick="
+    let res = confirm('ARE YOU SURE YOU WANT TO RESET HIGHSCORE!!!')
+    if(res){
+        localStorage.hs = 0
+        alert('Saved')
+        document.querySelector('button').blur()
+    }
+    " accesskey="h">
+        Reset Highscore
+    </button></div>
+</body>
+</html>
