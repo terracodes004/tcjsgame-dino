@@ -1,6 +1,8 @@
 const display =  new Display()
 display.start()
-
+if(!localStorage.hs){
+    localStorage.hs = 0
+}
 let s = 0
 let hst = new Component("25px", "Consolas", "black", 240, 40, "text")
 hs = Number(localStorage.hs)
@@ -62,4 +64,5 @@ function update(){
         hs = s
         localStorage.hs = s
     }
+
 }
